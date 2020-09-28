@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { CardList } from "./components/card-list/card-list.component";
+import {SearchBox} from "./components/searchBox/searchbox.component";
 import "./App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      monsters: []
+      monsters: [],
+      searchField: ""
     };
+    // this.handleChange = this.handleChange.bind(this); // when use arrow functions no need to bind
   }
 
   componentDidMount() {
@@ -16,14 +19,28 @@ class App extends Component {
       .then(users => this.setState({ monsters: users }));
   }
 
+  // handleChange(e) {
+  //   this.setState({searchField:e.target.value});
+  // }
+
+  handleChange = (e) => {
+    this.setState({searchField:e.target.value});
+  }
+
   render() {
+    // const monster = this.state.monsters;
+    // const searchField = this.state.searchField;
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
     return (
       <div className="App">
-        <CardList name="Smith">
-        {this.state.monsters.map(monster => (
-          <h1 key={monster.id}>{monster.name}</h1>
-        ))}
-        </CardList>
+        <SearchBox
+        placeholder="Search monsters"
+        handleChange = {this.handleChange}
+        />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
