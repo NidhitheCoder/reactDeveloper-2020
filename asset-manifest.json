@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/github.io/reactDeveloper-2020/static/css/main.10e32dd8.chunk.css",
+    "main.js": "/github.io/reactDeveloper-2020/static/js/main.f8c78145.chunk.js",
+    "main.js.map": "/github.io/reactDeveloper-2020/static/js/main.f8c78145.chunk.js.map",
+    "runtime-main.js": "/github.io/reactDeveloper-2020/static/js/runtime-main.e517815f.js",
+    "runtime-main.js.map": "/github.io/reactDeveloper-2020/static/js/runtime-main.e517815f.js.map",
+    "static/js/2.b4309f00.chunk.js": "/github.io/reactDeveloper-2020/static/js/2.b4309f00.chunk.js",
+    "static/js/2.b4309f00.chunk.js.map": "/github.io/reactDeveloper-2020/static/js/2.b4309f00.chunk.js.map",
+    "index.html": "/github.io/reactDeveloper-2020/index.html",
+    "precache-manifest.73295ac0740fa192af359fd40915710c.js": "/github.io/reactDeveloper-2020/precache-manifest.73295ac0740fa192af359fd40915710c.js",
+    "service-worker.js": "/github.io/reactDeveloper-2020/service-worker.js",
+    "static/css/main.10e32dd8.chunk.css.map": "/github.io/reactDeveloper-2020/static/css/main.10e32dd8.chunk.css.map",
+    "static/js/2.b4309f00.chunk.js.LICENSE.txt": "/github.io/reactDeveloper-2020/static/js/2.b4309f00.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e517815f.js",
+    "static/js/2.b4309f00.chunk.js",
+    "static/css/main.10e32dd8.chunk.css",
+    "static/js/main.f8c78145.chunk.js"
+  ]
+}
