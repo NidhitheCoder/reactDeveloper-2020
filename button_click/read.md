@@ -1,2 +1,0 @@
-- We are just assign functions to the event handler.
-- Arrow functions helps you to reduce confusing bind code and code length also.

@@ -1,4 +1,4 @@
-#Complete React Developer 2020
+# Section 1,2&3 - Basics of react
 
 ### React Concepts
 
@@ -107,3 +107,8 @@
 
 ### Unmount phase
 - componentWillUnmount() get called.(not rendering components)
+
+
+# section -4 Master project : setting up E-commerce project
+
+###
