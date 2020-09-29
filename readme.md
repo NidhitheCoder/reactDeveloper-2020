@@ -80,7 +80,30 @@
 
 ### State
 - Default value of state is 47. then,
+
     ```this.setState({stateName:56},()=>console.log(this.state.stateName));
     console.log(this.state.stateName);```
+
      - In the above example the first console ``log the latest state`` (// return 56).
      - The second console ``log the one state before the latest update`` (// return 47).
+
+## Lifecycle methods
+
+### Mounting Phase
+- Mounting phase is the phase the component is being put on the DOM for the first time.
+- It starts before the component on our DOM.
+- Call the constructor first.
+
+1. render() method
+- render() method tell that what to display to browser.
+- After the render the react update the DOM.
+- Things like API calls are happen here(base component fetching data)
+
+### Updating Phase
+- Newprops,setState() and New manually forceUpdate().
+- Changes and updating of DOM is happen in this phase.
+- componentDidMount() - Method that call after update the DOM.
+- When ever a component update or rerender all the children also rerender.
+
+### Unmount phase
+- componentWillUnmount() get called.(not rendering components)
