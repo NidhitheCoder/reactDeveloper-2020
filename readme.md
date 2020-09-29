@@ -58,4 +58,16 @@ React around the concept of reusable components.
 - Functional component get some props and return an html.
 
 #react & react-DOM
-- react is a great kind of engine
+- React is a great kind of engine
+
+### React
+- React libraby helps to manipulate the Dom efficiently.
+- Asyncronous will happen sometime in the future.Async will wait for complete the task.
+- Props as a parameter in constructor helps to use parameter in state. you canuse this.props inside of a constructor.
+
+### State
+- Default value of state is 47. then,
+    ```this.setState({stateName:56},()=>console.log(this.state.stateName));
+    console.log(this.state.stateName);```
+     - In the above example the first console ``log the latest state`` (// return 56).
+     - The second console ``log the one state before the latest update`` (// return 47).
