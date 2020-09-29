@@ -56,3 +56,6 @@ React around the concept of reusable components.
 - They dont have access to state and constructor. They also dont have lifecycle methods like componentDidMount.
 - Sometimes we need to render some html only.
 - Functional component get some props and return an html.
+
+#react & react-DOM
+- react is a great kind of engine
