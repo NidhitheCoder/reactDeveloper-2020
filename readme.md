@@ -112,3 +112,10 @@
 # section -4 Master project : setting up E-commerce project
 
 ###
+- React is just a UI library react does not provide routing for us.
+
+# React-router-dom
+
+- Route :- helps to routing trough the pages
+    properties are: exact,component,path
+- Switch :- helps to get more controll over code.
