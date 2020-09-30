@@ -34,6 +34,7 @@
 - components are easy to test and find bugs quickly.
 
 ### >> setState
+
 - setState is asyncronous funciton call, thats why the search button return the state(searchField state in this program) value one letter behind.
 
 ### Asyncronous and syncronous function call
@@ -56,66 +57,92 @@
 - Functional component get some props and return an html.
 
 ### React & react-DOM
+
 - React is a great kind of engine.
 - yarn upgrade - helps to upgrade dependencies versions.
 - ^ sign indicates new and latest version is available.
 - yarn list react react-dom react-scripts,yarn install,yarn upgrade
 - npm list react react-dom react-script,npm update,
-- * vulneralibities - vulnerabilities are minor security concern.
-- * nom audit fix helps to remove all vulnerabilities.
+- - vulneralibities - vulnerabilities are minor security concern.
+- - nom audit fix helps to remove all vulnerabilities.
+
 ### Lock file
+
 - Lock file - lock file is auto generated file by either npm or yarn that lock the version of all the packages inside our application within a specific range based on the rool that we set inside the package.json
 - why we need lock file ?
-    - Multiple people work with different version of same dependencies with same project will causes break our application. Need everybody use a consistant version of dependencies in  same project/ application.Yarn lock file ensure that everybody using same version of dependencies.
+  - Multiple people work with different version of same dependencies with same project will causes break our application. Need everybody use a consistant version of dependencies in same project/ application.Yarn lock file ensure that everybody using same version of dependencies.
 
 ### Virtual DOM
+
 - Virtual Dom is a complete copy of the actual Dom.
 - Actual Dom -> Virtual Dom -> New virtual Dom
 
-
 ### React
+
 - React libraby helps to manipulate the Dom efficiently.
 - Asyncronous will happen sometime in the future.Async will wait for complete the task.
 - Props as a parameter in constructor helps to use parameter in state. you canuse this.props inside of a constructor.
 
 ### State
+
 - Default value of state is 47. then,
 
-    ```this.setState({stateName:56},()=>console.log(this.state.stateName));
-    console.log(this.state.stateName);```
+  ````this.setState({stateName:56},()=>console.log(this.state.stateName));
+  console.log(this.state.stateName);```
 
-     - In the above example the first console ``log the latest state`` (// return 56).
-     - The second console ``log the one state before the latest update`` (// return 47).
+   - In the above example the first console ``log the latest state`` (// return 56).
+   - The second console ``log the one state before the latest update`` (// return 47).
+  ````
 
 ## Lifecycle methods
 
 ### Mounting Phase
+
 - Mounting phase is the phase the component is being put on the DOM for the first time.
 - It starts before the component on our DOM.
 - Call the constructor first.
 
 1. render() method
+
 - render() method tell that what to display to browser.
 - After the render the react update the DOM.
 - Things like API calls are happen here(base component fetching data)
 
 ### Updating Phase
+
 - Newprops,setState() and New manually forceUpdate().
 - Changes and updating of DOM is happen in this phase.
 - componentDidMount() - Method that call after update the DOM.
 - When ever a component update or rerender all the children also rerender.
 
 ### Unmount phase
-- componentWillUnmount() get called.(not rendering components)
 
+- componentWillUnmount() get called.(not rendering components)
 
 # section -4 Master project : setting up E-commerce project
 
 ###
+
 - React is just a UI library react does not provide routing for us.
 
-# React-router-dom
+# Section 5
+
+### React-router-dom
 
 - Route :- helps to routing trough the pages
-    properties are: exact,component,path
+  properties are: exact,component,path
 - Switch :- helps to get more controll over code.
+
+- props - history,location,match
+
+  - history
+    -
+  - Location
+    - Location props tells us to where we are currently.
+  - match
+
+  * Allow nested route structure
+
+- There is two ways to navigate in react-router-dom between pages
+  1. Link component - It borrowing the url and tell to application what to rerender.
+  2. history prop(thistory.push).
