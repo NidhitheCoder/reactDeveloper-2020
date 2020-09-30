@@ -146,3 +146,5 @@
 - There is two ways to navigate in react-router-dom between pages
   1. Link component - It borrowing the url and tell to application what to rerender.
   2. history prop(thistory.push).
+
+- withRouter :- withRouter is a higher order component. It takes a component as an argument and return a modified component. withRouter helps to access history to inner components.
