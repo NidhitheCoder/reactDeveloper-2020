@@ -87,7 +87,8 @@
 
 - Default value of state is 47. then,
 
-  ```` this.setState({stateName:56},()=>console.log(this.state.stateName));
+  ````
+  this.setState({stateName:56},()=>console.log(this.state.stateName));
   console.log(this.state.stateName);
 
    - In the above example the first console ``log the latest state`` (// return 56).
@@ -152,5 +153,25 @@
 
 # Section 7
 
-## firebase
+## Firebase
+- There are two types of data in a database
+    1. Collection - it's like an object or group
+    2. Documents - 
+- A query is a request we make to firestore to give us something from database.
+- Firestores return two types of objects: referances and snapshots
+    1. `QueryReferance` :
+      A queryReferance object is an object that represents  the "current" place in the database that we are querying. It does not have tha actual data  of the collection or document.It have properties  that tell the details about it.
 
+      We can get them by calling either:
+      ``` 
+        * firestore.doc('/users/:userid');
+        * firestore.collection('/users');
+      ```
+      - Document Referance : CRUD(set(),get(),update(),delete())
+      - Collection Referance : add()
+
+
+    2. `QuerySnapshots` : 
+    - It get from the referance object using the get() method.
+      
+- Firestore always return  these objects, even if nothing exists at from that query.
