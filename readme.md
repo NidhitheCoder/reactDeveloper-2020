@@ -87,13 +87,13 @@
 
 - Default value of state is 47. then,
 
-  ````
+  ```
   this.setState({stateName:56},()=>console.log(this.state.stateName));
   console.log(this.state.stateName);
 
    - In the above example the first console ``log the latest state`` (// return 56).
    - The second console ``log the one state before the latest update`` (// return 47).
-  ````
+  ```
 
 ## Lifecycle Methods
 
@@ -136,8 +136,7 @@
 
 - props - history,location,match
 
-  - history
-    -
+  - ## history
   - Location
     - Location props tells us to where we are currently.
   - match
@@ -145,25 +144,28 @@
   * Allow nested route structure
 
 - There is two ways to navigate in react-router-dom between pages
+
   1. Link component - It borrowing the url and tell to application what to rerender.
   2. history prop(history.push).
 
 - withRouter :- withRouter is a higher order component. It takes a component as an argument and return a modified component. withRouter helps to access history to inner components.
 
-
 # Section 7
 
 ## Firebase
+
 - There are two types of data in a database
-    1. Collection - it's like an object or group
-    2. Documents - 
+  1. Collection - it's like an object or group
+  2. Documents -
 - A query is a request we make to firestore to give us something from database.
 - Firestores return two types of objects: referances and snapshots
-    1. `QueryReferance` :
-      A queryReferance object is an object that represents  the "current" place in the database that we are querying. It does not have tha actual data  of the collection or document.It have properties  that tell the details about it.
+
+  1. `QueryReferance` :
+     A queryReferance object is an object that represents the "current" place in the database that we are querying. It does not have tha actual data of the collection or document.It have properties that tell the details about it.
+
 
       We can get them by calling either:
-      ``` 
+      ```
         * firestore.doc('/users/:userid');
         * firestore.collection('/users');
       ```
@@ -171,7 +173,10 @@
       - Collection Referance : add()
 
 
-    2. `QuerySnapshots` : 
-    - It get from the referance object using the get() method.
-      
-- Firestore always return  these objects, even if nothing exists at from that query.
+    2. `QuerySnapshots` :
+      - We get a snapshotDocument object  from our documentReferance object.
+      - It allows to check if a document exists at this query using the .exists property which return a boolean value.
+      - We can also get  the actual properties on the object by calling the .data() method, which return us a JSON document object.
+
+
+- Firestore always return these objects, even if nothing exists at from that query.
