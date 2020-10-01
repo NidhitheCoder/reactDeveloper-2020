@@ -125,7 +125,7 @@
 
 - React is just a UI library react does not provide routing for us.
 
-# Section 5
+# Section 5 & 6
 
 ### React-router-dom
 
@@ -148,3 +148,9 @@
   2. history prop(history.push).
 
 - withRouter :- withRouter is a higher order component. It takes a component as an argument and return a modified component. withRouter helps to access history to inner components.
+
+
+# Section 7
+
+## firebase
+
