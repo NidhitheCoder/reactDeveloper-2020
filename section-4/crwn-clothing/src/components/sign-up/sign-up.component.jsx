@@ -44,9 +44,9 @@ class SignUp extends React.Component {
 
   handleChange = event => {
     const { name, value } = event.target;
-    this.state = {
+    this.setState ({
       [name]: value
-    };
+    });
     // Here square bracket used to asign a variable as key of the state.
   };
 
@@ -61,7 +61,7 @@ class SignUp extends React.Component {
             type="text"
             name="displayName"
             value={displayName}
-            onchange={this.handleChange}
+            onChange={this.handleChange}
             label="Display Name"
             required
           />
@@ -70,7 +70,7 @@ class SignUp extends React.Component {
             type="email"
             name="email"
             value={email}
-            onchange={this.handleChange}
+            onChange={this.handleChange}
             label="Email"
             required
           />
@@ -79,7 +79,7 @@ class SignUp extends React.Component {
             type="password"
             name="password"
             value={password}
-            onchange={this.handleChange}
+            onChange={this.handleChange}
             label="Password"
             required
           />
@@ -87,8 +87,8 @@ class SignUp extends React.Component {
           <FormInput
             type="password"
             name="confirmPassword"
-            value={password}
-            onchange={this.handleChange}
+            value={confirmPassword}
+            onChange={this.handleChange}
             label="Confirm Password"
           />
 
