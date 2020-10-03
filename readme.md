@@ -33,7 +33,7 @@
 - Flexibility of performance improvement.
 - Components are easy to test and find bugs quickly.
 
-### >> setState
+### setState
 
 - setState is asyncronous funciton call, thats why the search button return the state(searchField state in this program) value one letter behind.
 
@@ -48,7 +48,8 @@
 
 ### Array Methods
 
-- filter - for filtering items from an array,includes - check the given string is include in array item(take and compare each array elements).
+- filter - for filtering items from an array.
+- includes - check the given string is include in array item(take and compare each array elements).
 
 ### Functional Component
 
@@ -69,6 +70,7 @@
 ### Lock File
 
 - Lock file - lock file is auto generated file by either npm or yarn that lock the version of all the packages inside our application within a specific range based on the rool that we set inside the package.json
+
 - why we need lock file ?
   - Multiple people work with different version of same dependencies with same project will causes break our application. Need everybody use a consistant version of dependencies in same project/ application.Yarn lock file ensure that everybody using same version of dependencies.
 
@@ -133,15 +135,15 @@
 - Route :- helps to routing trough the pages
   properties are: exact,component,path
 - Switch :- helps to get more controll over code.
+- props :- history,location,match
 
-- props - history,location,match
+  - history
 
-  - ## history
-  - Location
+  * Location
     - Location props tells us to where we are currently.
-  - match
+  * match
 
-  * Allow nested route structure
+  - Allow nested route structure
 
 - There is two ways to navigate in react-router-dom between pages
 
@@ -160,7 +162,7 @@
 - A query is a request we make to firestore to give us something from database.
 - Firestores return two types of objects: referances and snapshots
 
-  1. `QueryReferance` :
+  1. `QueryReferance` :-
      A queryReferance object is an object that represents the "current" place in the database that we are querying. It does not have tha actual data of the collection or document.It have properties that tell the details about it.
 
 
@@ -173,10 +175,10 @@
       - Collection Referance : add()
 
 
-    2. `QuerySnapshots` :
+    2. `QuerySnapshots` :-
       - We get a snapshotDocument object  from our documentReferance object.
-      - It allows to check if a document exists at this query using the .exists property which return a boolean value.
-      - We can also get  the actual properties on the object by calling the .data() method, which return us a JSON document object.
+        It allows to check if a document exists at this query using the .exists property which return a boolean value.
+        We can also get  the actual properties on the object by calling the .data() method, which return us a JSON document object.
 
 - Firestore always return these objects, even if nothing exists at from that query.
 
@@ -193,21 +195,21 @@
 - Predictible state management using the 3 principles.they are;
 
   ```
-    * <u> Single principle of truth <u>.
+    * Single principle of truth .
       - One single object describes entire state of the app.
 
     * State is read only.
       - Not modifyinng the object.
       - It prevent unexpected errors.
-      - The state that modified with Redux is never get modified. We would to create a new state   after each action is taken by user.
+      - The state that modified with Redux is never get modified. We would to create a new state after each action is taken by user.
 
     * Changes using pure functions.
-      - Pure functions :- Receives and input and always return an output that is predictible.
+      - Pure functions :- Receives and input and always return an output that is predictable.
       - Action -> Root Reducer -> Store -> (react) -> DOM Changes
         - a Reduces is a pure function.
         - the output is created by  reducer is state (Store, called it in redux).
 
   ```
 
-  - Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
-    - Action -> Dispatcher -> Store -> View
+- Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
+  - Action -> Dispatcher -> Store -> View
