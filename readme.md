@@ -187,6 +187,7 @@
 - Redux is a librady that makes state management easier.
 - Redux actulally inspire from database management.
 - Redux is good for managing large state.
+- Redux is doing similer things to this.setState().
 - Redux avoid this.state becouse of it is more complicated.
 - The Redux allows react state to be more scalable.
 - Redux does'nt replace completely the this.state (or this.setState() in react).
@@ -205,11 +206,56 @@
 
     * Changes using pure functions.
       - Pure functions :- Receives and input and always return an output that is predictable.
-      - Action -> Root Reducer -> Store -> (react) -> DOM Changes
-        - a Reduces is a pure function.
-        - the output is created by  reducer is state (Store, called it in redux).
-
+      - Action -> (Middleware)-> Root Reducer -> Store -> (react) -> DOM Changes
   ```
+
+  #### Reducer
+
+        - a Reducer is a pure function.
+        - Reducer are fundamental part of redux because they are essentially what are state represented by.
+        - the output is created by  reducer is state (Store, called it in redux).
+        - Root reducer is tha big object that hold all the smaller objects.
+        - trigger actions -> to be an action object.
+        - Action is an object that contain type and payload.
+        - Reducer takes an action  and state as parameters.
+
+        Example:-
+
+            ```
+              const userReducer = (currentState,action) => {
+                switch (action.type) {
+                  case 'SET_CURRENT_USER' :
+                    return {
+                      ...currentState,
+                      currentUser:action.payload
+                    };
+                    default:
+                      return curentState;
+                }
+              };
+
+            ```
+            - In the above examples reducer(named userReducer) takes two parameter currentState and action and check the action type with switch cases. If any switch case is true  then return whole state with the specific changes. In this case currentState is the return state with only change the curentUser object.
+            - if you are only return the changed object, then the state is not rerendered.that is
+            if you are return like this,
+
+              ```
+              return currentState.currentUser = action.payload;
+
+              ```
+              then the components will not reupdate.
+  #### Reducer
+    - Middleware is a piece of code that get the action before the reducer.
+    - npm add redux redux-logger react-redux / yar add redux redux-logger react-redux
 
 - Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
   - Action -> Dispatcher -> Store -> View
+
+#### Provider
+  - Provider is a component that we get from react-redux.
+  - Provider is a component that we want to wrap around the entire application because we want everything inside to have access this store object that we get from redux.
+  - provider is the parent of everything  inside of our application.
+  - it allows to get access to all of the things related to the store that we are going.
+
+#### Root Reducer
+  - Root reducer is the actual base reducer object that represents all of the state of our application.
