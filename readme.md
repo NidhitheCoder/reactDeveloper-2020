@@ -207,48 +207,49 @@
     * Changes using pure functions.
       - Pure functions :- Receives and input and always return an output that is predictable.
       - Action -> (Middleware)-> Root Reducer -> Store -> (react) -> DOM Changes
+
   ```
 
 #### Reducer
 
-    - a Reducer is a pure function.
-    - Reducer are fundamental part of redux because they are essentially what are state represented by.
-    - the output is created by  reducer is state (Store, called it in redux).
-    - Root reducer is tha big object that hold all the smaller objects.
-    - trigger actions -> to be an action object.
-    - Action is an object that contain type and payload.
-    - Reducer takes an action  and state as parameters.
+- a Reducer is a pure function.
+- Reducer are fundamental part of redux because they are essentially what are state represented by.
+- the output is created by reducer is state (Store, called it in redux).
+- Root reducer is tha big object that hold all the smaller objects.
+- trigger actions -> to be an action object.
+- Action is an object that contain type and payload.
+- Reducer takes an action and state as parameters.
 
-    Example:-
+Example:-
+
+      ```
+        const userReducer = (currentState,action) => {
+          switch (action.type) {
+            case 'SET_CURRENT_USER' :
+              return {
+                ...currentState,
+                currentUser:action.payload
+              };
+              default:
+                return curentState;
+          }
+        };
+
+      ```
+      - In the above examples reducer(named userReducer) takes two parameter currentState and action and check the action type with switch cases. If any switch case is true  then return whole state with the specific changes. In this case currentState is the return state with only change the curentUser object.
+      - if you are only return the changed object, then the state is not rerendered.that is
+      if you are return like this,
 
         ```
-          const userReducer = (currentState,action) => {
-            switch (action.type) {
-              case 'SET_CURRENT_USER' :
-                return {
-                  ...currentState,
-                  currentUser:action.payload
-                };
-                default:
-                  return curentState;
-            }
-          };
+        return currentState.currentUser = action.payload;
 
         ```
-        - In the above examples reducer(named userReducer) takes two parameter currentState and action and check the action type with switch cases. If any switch case is true  then return whole state with the specific changes. In this case currentState is the return state with only change the curentUser object.
-        - if you are only return the changed object, then the state is not rerendered.that is
-        if you are return like this,
-
-          ```
-          return currentState.currentUser = action.payload;
-
-          ```
-          then the components will not reupdate.
+        then the components will not reupdate.
 
 #### Middleware
 
-    - Middleware is a piece of code that get the action before the reducer.
-    - npm add redux redux-logger react-redux / yar add redux redux-logger react-redux
+- Middleware is a piece of code that get the action before the reducer.
+- npm add redux redux-logger react-redux / yar add redux redux-logger react-redux
 
 - Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
   - Action -> Dispatcher -> Store -> View
