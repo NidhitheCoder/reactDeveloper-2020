@@ -178,5 +178,36 @@
       - It allows to check if a document exists at this query using the .exists property which return a boolean value.
       - We can also get  the actual properties on the object by calling the .data() method, which return us a JSON document object.
 
-
 - Firestore always return these objects, even if nothing exists at from that query.
+
+## Redux
+
+- Redux is a librady that makes state management easier.
+- Redux actulally inspire from database management.
+- Redux is good for managing large state.
+- Redux avoid this.state becouse of it is more complicated.
+- The Redux allows react state to be more scalable.
+- Redux does'nt replace completely the this.state (or this.setState() in react).
+- Usefull for sharing data between components.
+- With react it is very difficult to moveup state on one layer. With redux it is very easy.
+- Predictible state management using the 3 principles.they are;
+
+  ```
+    * <u> Single principle of truth <u>.
+      - One single object describes entire state of the app.
+
+    * State is read only.
+      - Not modifyinng the object.
+      - It prevent unexpected errors.
+      - The state that modified with Redux is never get modified. We would to create a new state   after each action is taken by user.
+
+    * Changes using pure functions.
+      - Pure functions :- Receives and input and always return an output that is predictible.
+      - Action -> Root Reducer -> Store -> (react) -> DOM Changes
+        - a Reduces is a pure function.
+        - the output is created by  reducer is state (Store, called it in redux).
+
+  ```
+
+  - Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
+    - Action -> Dispatcher -> Store -> View
