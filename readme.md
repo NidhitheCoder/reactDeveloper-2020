@@ -210,6 +210,9 @@
 
   ```
 
+  - Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
+      - Action -> Dispatcher -> Store -> View
+
 #### Reducer
 
 - a Reducer is a pure function.
@@ -250,9 +253,6 @@ Example:-
 
 - Middleware is a piece of code that get the action before the reducer.
 - npm add redux redux-logger react-redux / yar add redux redux-logger react-redux
-
-- Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
-  - Action -> Dispatcher -> Store -> View
 
 #### Provider
 
