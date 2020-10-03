@@ -211,7 +211,7 @@
   ```
 
   - Uses an architecture pattern called Flex Pattern. In this everithing flows one way.
-      - Action -> Dispatcher -> Store -> View
+    - Action -> Dispatcher -> Store -> View
 
 #### Reducer
 
@@ -264,3 +264,8 @@ Example:-
 #### Root Reducer
 
 - Root reducer is the actual base reducer object that represents all of the state of our application.
+
+#### Connect
+
+- Connect is a higher order component.that let us modify component to have access to things related to redux.
+- Higher order component :- Higher order component are thu funcitons that take components as arguments and then return you a souped up component.
