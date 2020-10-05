@@ -273,3 +273,7 @@ Example:-
 #### Utility Functions
 
 - Utility functions alow us to keep our files clean and organise functions that we may need in multiple file in one location.
+
+#### 2 Types of Selectors
+  - Input selector : That doesn't use createSelector.
+  - Output selector : That does use input selector and createSelector.
