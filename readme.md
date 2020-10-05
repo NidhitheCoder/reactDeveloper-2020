@@ -269,3 +269,7 @@ Example:-
 
 - Connect is a higher order component.that let us modify component to have access to things related to redux.
 - Higher order component :- Higher order component are thu funcitons that take components as arguments and then return you a souped up component.
+
+#### Utility Functions
+
+- Utility functions alow us to keep our files clean and organise functions that we may need in multiple file in one location.
