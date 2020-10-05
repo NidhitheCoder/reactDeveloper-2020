@@ -1,13 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
+import {createStructuredSelector} from 'reselect'
+
+import "./App.css";
+
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shopPage/shopPage.component";
 import Header from "./components/header/header.component";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utlis";
 import { setCurrentUser } from "./redux/user/user.action";
+import {selectCurrentUser} from './redux/user/user.selector';
 
 // const HatPage = () =>(
 //   <div>
@@ -70,8 +74,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
