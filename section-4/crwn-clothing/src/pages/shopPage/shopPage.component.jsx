@@ -7,7 +7,7 @@ import { Route } from "react-router-dom";
 // import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 // import { selectCollections } from "../../redux/shop/shop.selectors";
 import collectionsOverview from "../../components/collections-overview/collections-overview.component";
-import CategoryPage from "../category/category.component";
+import CollectionPage from "../collection/collection.component";
 
 // class ShopPage extends React.Component {
 //   constructor(props) {
@@ -32,7 +32,7 @@ import CategoryPage from "../category/category.component";
 const ShopPage = ({ match }) => (
   <div className="shop-page">
     <Route exact path={`${match.path}`} component={collectionsOverview} />
-    <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
+    <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
   </div>
 );
 
