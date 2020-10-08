@@ -339,3 +339,27 @@ Example:-
   ```
   git push heroku master
   ```
+
+#### BEM naming conventions
+
+- Block,Element,Modifier
+
+- When you give inline styles you cannot acces some of the css selectors to those styles(hover,nth-child,etc...).
+- The main problem in css is style leaking across components becouse of the shared namspace in css.
+
+#### Styled Component library
+
+- Styled component library helps to use css selectors to the js-styled-component.
+- `yarn add styled-components` or `npm install styled-components`
+- Usage : - 
+          ```
+            import styled from 'styled-components'
+            const Text = styled.div`color:green; font-size:23px`
+
+          <div>
+            <Text> I am a div component style with Styled-components librabry</Text>
+          </div>
+
+          ```
+      - Here i use div components for styling. You can use any tag for stying.
+      - It generate unique string class for the components and also the head append unique style css file.The main advantage is the style is never bleed
