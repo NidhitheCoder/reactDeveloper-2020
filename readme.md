@@ -275,5 +275,67 @@ Example:-
 - Utility functions alow us to keep our files clean and organise functions that we may need in multiple file in one location.
 
 #### 2 Types of Selectors
-  - Input selector : That doesn't use createSelector.
-  - Output selector : That does use input selector and createSelector.
+
+- Input selector : That doesn't use createSelector.
+- Output selector : That does use input selector and createSelector.
+
+#### UTF-8
+
+- UTF is a standerd Most of the browsers have, that represents what characters able to display or they able to recognize.
+
+#### SessionStorage and LocalStorage
+
+- SessionStorage :- SessionStorage persist though the sessions as long as browser tab is open even if we refresh the page we will still have access to what we've stored in session storage. when we close the page then we will lose that what we stored.
+- localStorage :- local storage will persist until we'll clear it out.
+  - localStorage have setItem() and getItem().
+  - In localStorage store data under string key and use the same key to access it.
+  - In localStorage we have to store strings only
+  - JSON.stringify() allows us to stringify an object.
+  - JSON.parse() helps to get convert a stringified object into object type.
+- Redux persist helps to acces either sessionStorage or localStorage easly.
+
+#### ownprops
+
+- Which is the props of the component that we are wrapping in our connect.
+
+#### Object.Keys()
+
+- Object.keys() gets us all of the keys of an object that we pass into it and gives us to in an array format.
+- Objects.Keys return all the key values of given object.
+
+### Stripe integration
+
+- It is a simple way to accept online payments.
+- Dashborad -> Developers -> API Keys -> publishable keys and secret keys
+
+### Heroku
+
+- Heroku allows us to host web application on a url that they provide for us for free.
+- For heroku CLI install -
+
+  ```
+  npm install -g heroku
+  ```
+
+- For check version
+
+```
+  heroku version
+```
+
+- For login into heroku
+
+  ```
+  heroku login
+  ```
+
+- For create heroku Project using CLI
+
+  ```
+  heroku create <name of the site>
+  ```
+
+- For push to heroku
+  ```
+  git push heroku master
+  ```
