@@ -172,7 +172,9 @@
         * firestore.collection('/users');
       ```
       - Document Referance : CRUD(set(),get(),update(),delete())
-      - Collection Referance : add()
+      - Collection Referance : add() : collectionRef.add({//value:prop})
+      - There are two types of reference objects : DocumentReferance and CollectionReferance
+      - documentRef returns a documentSnapshotObject and collectionRef returns a querySnapshot object.
 
 
     2. `QuerySnapshots` :-
@@ -351,10 +353,10 @@ Example:-
 
 - Styled component library helps to use css selectors to the js-styled-component.
 - `yarn add styled-components` or `npm install styled-components`
-- Usage : - 
-          ```
-            import styled from 'styled-components'
-            const Text = styled.div`color:green; font-size:23px`
+- Usage : -
+  ```
+  import styled from 'styled-components'
+  const Text = styled.div`color:green; font-size:23px`
 
           <div>
             <Text> I am a div component style with Styled-components librabry</Text>
