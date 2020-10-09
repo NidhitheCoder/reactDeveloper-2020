@@ -183,6 +183,12 @@
         We can also get  the actual properties on the object by calling the .data() method, which return us a JSON document object.
 
 - Firestore always return these objects, even if nothing exists at from that query.
+- Firebase is a `NoSQL` databse.
+- Data types you can store in firebase database: string,number,map,boolean,array,null,timestamp,geopoint
+- Maps in a JSON object that always have unique key
+- Geopoint which is kind of  like coordinate
+- Batch right : batch right is essentially just a way to batch  group all of our calls together into one request.
+- firebase gives us a batch object.
 
 ## Redux
 
