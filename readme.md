@@ -183,6 +183,12 @@
         We can also get  the actual properties on the object by calling the .data() method, which return us a JSON document object.
 
 - Firestore always return these objects, even if nothing exists at from that query.
+- Firebase is a `NoSQL` databse.
+- Data types you can store in firebase database: string,number,map,boolean,array,null,timestamp,geopoint
+- Maps in a JSON object that always have unique key
+- Geopoint which is kind of like coordinate
+- Batch right : batch right is essentially just a way to batch group all of our calls together into one request.
+- firebase gives us a batch object.
 
 ## Redux
 
@@ -354,7 +360,8 @@ Example:-
 - Styled component library helps to use css selectors to the js-styled-component.
 - `yarn add styled-components` or `npm install styled-components`
 - Usage : -
-  ```
+
+  ````
   import styled from 'styled-components'
   const Text = styled.div`color:green; font-size:23px`
 
@@ -365,3 +372,8 @@ Example:-
           ```
       - Here i use div components for styling. You can use any tag for stying.
       - It generate unique string class for the components and also the head append unique style css file.The main advantage is the style is never bleed
+  ````
+
+#### Render()
+
+- Render is a method that takes a function where the parameter and the function are pretty much just the parameters that the component will receive.
