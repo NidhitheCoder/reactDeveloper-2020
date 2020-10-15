@@ -385,3 +385,6 @@ Example:-
   <arrayname>.find((element)=>{function body})
 
   ```
+
+
+array
