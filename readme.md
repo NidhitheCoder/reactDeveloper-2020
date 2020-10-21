@@ -377,3 +377,14 @@ Example:-
 #### Render()
 
 - Render is a method that takes a function where the parameter and the function are pretty much just the parameters that the component will receive.
+
+#### Array.find()
+- Array.find() method is used from get a value from the given array 
+
+  ```
+  <arrayname>.find((element)=>{function body})
+
+  ```
+
+
+array
