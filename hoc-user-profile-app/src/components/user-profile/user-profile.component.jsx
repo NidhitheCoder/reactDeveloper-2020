@@ -1,25 +1,20 @@
 import React from "react";
 
 import "./user-profile.styles.scss";
+import withData from "../../with-data";
 
-class UserProfile extends React.Component {
-
-
-  render() {
-    return (
-      <div className="container">
-        <h1>{this.props.name}</h1>
-        <h2>{this.props.email}</h2>
-        Posts :{" "}
-        {this.state.posts.map(post => (
-          <div className="post" key={post.id}>
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
-          </div>
-        ))}
+const UserProfile = ({ data, name, email }) => (
+  <div className="container user-list">
+    <h1>{name}</h1>
+    <h4>{email}</h4>
+    Posts:
+    {data.map(post => (
+      <div className="post" key={post.id}>
+        <h5>{post.title}</h5>
+        <p>{post.body}</p>
       </div>
-    );
-  }
-}
+    ))}
+  </div>
+);
 
-export default UserProfile;
+export default withData(UserProfile); //changeID-111 :  ,"https://jsonplaceholder.typicode.com/posts"
