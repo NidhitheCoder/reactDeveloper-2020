@@ -385,6 +385,11 @@ Example:-
   <arrayname>.find((element)=>{function body})
 
   ```
+  
 
+  ### Firebase REST API
 
-array
+  - All the REST API endpoints exist under the base URL 'https://firestore.googleapis.com/v1/'
+
+  - How to create  a path to a doc or collections
+    - https://firestore.googleapis.com/v1/projects/YOUR_PROJECT_ID/databases/(default)/documents/ (COLLECTION_PATH OR DOCUMENT PATH)
